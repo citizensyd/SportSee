@@ -1,25 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+// Importe la bibliothèque React
+import React from "react";
 
-function App() {
+// Définit une fonction fléchée (ES6) nommée Layout qui prend un paramètre "props"
+// "props" est un objet JavaScript qui contient les propriétés et les valeurs passées à ce composant React
+// Dans ce cas, le composant Layout utilise une seule propriété, "children", qui contiendra le contenu affiché à l'intérieur du composant
+const App = (props) => {
+  // Retourne un élément "section" HTML qui a une classe "body-page"
+  // "props.children" représente le contenu qui est passé à ce composant, et sera affiché à l'intérieur de l'élément "section"
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <section className="body-page">
+      {props.children}
+    </section>
   );
-}
+};
 
+// Exporte la fonction Layout pour qu'elle puisse être utilisée dans d'autres fichiers
 export default App;
