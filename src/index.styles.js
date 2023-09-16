@@ -1,20 +1,21 @@
 import { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyle = createGlobalStyle`
+#root{
+  width: 100%
+}
 body {
   display: flex;
   justify-content: center;
-  background-color: #020203;
-  height: auto;
   margin: 0 auto;
+  background-color: #020203;
   font-family: 'Roboto', sans-serif;
 }
 .body-page {
     background-color: #FFFFFF;
+    margin: 0 auto;
     color: black;
-    width: 1440px;
-    height: 1080px;
-    min-width: 1024px;
     min-height: 780px;
+    min-width: 1024px;
 }
 `;

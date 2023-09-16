@@ -2,7 +2,6 @@ import styled from 'styled-components';
 
 export const HorBar = styled.div`
     display: flex;
-    width: 100%;
     align-items: center;
     justify-content: space-between;
     height: 91px;

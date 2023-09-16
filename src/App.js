@@ -5,6 +5,7 @@ import React from "react";
 // "props" est un objet JavaScript qui contient les propriétés et les valeurs passées à ce composant React
 // Dans ce cas, le composant Layout utilise une seule propriété, "children", qui contiendra le contenu affiché à l'intérieur du composant
 const App = (props) => {
+  console.log("appel de app");
   // Retourne un élément "section" HTML qui a une classe "body-page"
   // "props.children" représente le contenu qui est passé à ce composant, et sera affiché à l'intérieur de l'élément "section"
   return (
