@@ -4,14 +4,13 @@ import { MainStyle } from "./Main.styles.js";
 import VerticalBar from "./VerticalBar.js";
 import SectionUser from "./SectionUser.js";
 
-
 const Main = (props) => {
     console.log(props.firstName);
-    console.log(props.sessionsData);
+  console.log(props.userNutriment);
     return (
         <MainStyle>
             <VerticalBar />
-            <SectionUser firstName = {props.firstName} sessionsData={props.sessionsData}>
+            <SectionUser firstName = {props.firstName} sessionsData={props.sessionsData} userNutriment={props.userNutriment}>
             </SectionUser>
         </MainStyle>
     );

@@ -9,6 +9,7 @@ import yoga from "../Images/yoga.png"
 
 
 const VerticalBar = () => {
+  console.log(yoga);
   return (
     <VerBar>
       <VerNav>

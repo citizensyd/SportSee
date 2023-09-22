@@ -5,7 +5,6 @@ import { CustomTooltipStyle } from './ChartDailyBusinessStyle';
 
 
 const ChartDailyBusiness = (props) => {
-  console.log(props.sessionsData);
   const customTickFormatter = (tick) => {
     const date = new Date(tick);
     return date.getDate();
@@ -20,7 +19,7 @@ const ChartDailyBusiness = (props) => {
         </CustomTooltipStyle>
       );
     }
-  
+
     return null;
   };
 
@@ -31,8 +30,7 @@ const ChartDailyBusiness = (props) => {
         <XAxis tickMargin={16} dataKey="day" tickLine={false} axisLine={false} tickFormatter={customTickFormatter} />
         <YAxis yAxisId="kg" tickCount="4" tickLine={false} axisLine={false} orientation="right" dataKey={"kilogram"} type="number" domain={['dataMin-1', 'dataMax+1']} />
         <YAxis yAxisId="cal" hide="true" tickLine={false} axisLine={false} dataKey={"calories"} type="number" domain={[0, 'dataMax+20']} />
-        <Tooltip content={<CustomTooltip />}
-/* contentStyle={{ backgroundColor: '#E60000' }}  */ />
+        <Tooltip content={<CustomTooltip />} />
         <Legend payload={[
           { value: "Poids (kg)", id: "kilogram", color: "#282D30" },
           { value: "Calories brûlées (kCal)", id: "calories", color: "#E60000" },
