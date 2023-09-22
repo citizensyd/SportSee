@@ -8,7 +8,6 @@ import fatIcon from "../Images/fat-icon.png";
 import proteinIcon from "../Images/protein-icon.png";
 
 const Nutriment = (props) => {
-  console.log(props.userNutriment);
   const item = {};
 
   function getItem(name) {
@@ -53,7 +52,6 @@ const Nutriment = (props) => {
 
   getItem(props.name);
 
-  console.log(item.value);
   return (
     <NutrimentStyle>
       <img src={item.iconAdress} alt={item.alt} />

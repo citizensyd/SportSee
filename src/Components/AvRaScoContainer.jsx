@@ -9,7 +9,7 @@ const AvRaScoContainer = (props) => {
 
     return (
         <AvRaScoContainerStyles>
-            <AverageSessionLength />
+            <AverageSessionLength userAverage={props.userAverage}/>
             <Radar />
             <Score />
         </AvRaScoContainerStyles>

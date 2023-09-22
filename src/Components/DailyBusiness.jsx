@@ -4,8 +4,6 @@ import ChartDailyBusiness from "./ChartDailyBusiness";
 import { DailyBusinessStyle } from "./DailyBusiness.styles";
 
 const DailyBusiness = (props) => {
-    console.log(props.sessionsData);
-
     return (
         <DailyBusinessStyle>
             <p>Activité Quotidienne</p>

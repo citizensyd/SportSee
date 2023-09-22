@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
-import Home from './pages/Home.js';
-// Importer les composants de la bibliothèque react-router-dom
+import Home from './pages/Home';
+
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import reportWebVitals from './reportWebVitals';
-import { GlobalStyle } from './index.styles.js';
+import { GlobalStyle } from './index.styles';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
