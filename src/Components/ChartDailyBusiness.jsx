@@ -13,7 +13,7 @@ const ChartDailyBusiness = (props) => {
   const CustomTooltip = ({ active, payload }) => {
     if (active) {
       return (
-        <CustomTooltipStyle className="custom-tooltip">
+        <CustomTooltipStyle>
           <div>{`${payload[0].value}kg`}</div>
           <div>{`${payload[1].value}kCal`}</div>
         </CustomTooltipStyle>
