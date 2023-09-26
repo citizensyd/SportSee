@@ -14,8 +14,12 @@ const SectionUser = (props) => {
       <Title firstName={props.firstName}></Title>
       <GraphStyle>
         <div>
-          <DailyBusiness sessionsData={props.sessionsData} />
-          <AvRaScoContainer userAverage={props.userAverage} />
+          <DailyBusiness sessionsData={props.sessionsData} />                
+          <AvRaScoContainer
+            userAverage={props.userAverage}
+            userPerformance={props.userPerformance}
+            userObjective={props.userObjective}
+          />
         </div>
         <NutrimentsContainer userNutriment={props.userNutriment} />
       </GraphStyle>

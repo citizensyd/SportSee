@@ -13,6 +13,8 @@ const Main = (props) => {
                 sessionsData={props.sessionsData}
                 userNutriment={props.userNutriment}
                 userAverage={props.userAverage}
+                userPerformance={props.userPerformance}
+                userObjective={props.userObjective}
             ></SectionUser>
         </MainStyle>
     );

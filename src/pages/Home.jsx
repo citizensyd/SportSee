@@ -29,8 +29,9 @@ const Home = () => {
   const sessionsData = userData?.activityData?.data?.sessions;
   const userNutriment = userData?.userData?.data?.keyData;
   const userAverage = userData?.averageSessionsData?.data?.sessions;
+  const userPerformance = userData?.performanceData?.data;
+  const userObjective = userData?.userData?.data?.todayScore;
   console.log(userData);
-  console.log(userAverage);
   return (
     <>
       {firstName && (
@@ -41,6 +42,8 @@ const Home = () => {
             sessionsData={sessionsData}
             userNutriment={userNutriment}
             userAverage={userAverage}
+            userPerformance={userPerformance}
+            userObjective={userObjective}
           ></Main>
         </>
       )}
