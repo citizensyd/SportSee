@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 
 export const RadarStyles = styled.div`
-    width: 258px;
+    display: flex;
+    width: 32%;
     height: 263px;
     border-radius: 5px;
     background: #282D30;

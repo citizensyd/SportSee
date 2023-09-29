@@ -1,17 +1,21 @@
 import styled from 'styled-components';
 
 export const HorBar = styled.div`
+    z-index: 2;
+    position: fixed;
+    top: 0px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     height: 91px;
     background: #020203;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-    height: 91px;
     flex-shrink: 0;
+    width: 100%;
     img {
         width: 178px;
-        padding-left: 30px;
+        margin-left: 30px;
+        margin-right: 50px;
     }
 `;
 

@@ -1,10 +1,10 @@
-import React from "react";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-
 import { UserFetcher } from "../Service/api";
-import HorizontalBar from "../Components/HorizontalBar"
-import Main from "../Components/Main"
+import HorizontalBar from "../Components/HorizontalBar";
+import VerticalBar from "../Components/VerticalBar";
+import SectionUser from "../Components/SectionUser";
+
 
 const Home = () => {
   console.log("appel de home");
@@ -20,11 +20,11 @@ const Home = () => {
         console.error("Erreur lors du chargement des données utilisateur", error);
       }
     };
-    console.log('appel de useEffect')
+    console.log('appel de useEffect');
 
     fetchUserData();
-
   }, []);
+
   const firstName = userData?.userData?.data?.userInfos?.firstName;
   const sessionsData = userData?.activityData?.data?.sessions;
   const userNutriment = userData?.userData?.data?.keyData;
@@ -37,19 +37,20 @@ const Home = () => {
       {firstName && (
         <>
           <HorizontalBar />
-          <Main
+          <VerticalBar />
+          <SectionUser
             firstName={firstName}
             sessionsData={sessionsData}
             userNutriment={userNutriment}
             userAverage={userAverage}
             userPerformance={userPerformance}
             userObjective={userObjective}
-          ></Main>
+          />
         </>
       )}
     </>
-  );
-};
+  )
+}
 
 export default Home;
 

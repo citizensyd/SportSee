@@ -2,7 +2,8 @@ import styled from 'styled-components';
 
 export const DailyBusinessStyle = styled.div`
 position: relative;
-    width: 835px;
+    display: flex;
+    width: 100%;
     height: 320px;
     border-radius: 5px;
     flex-shrink: 0;
@@ -13,6 +14,7 @@ position: relative;
         position: absolute;
         left: 50px;
         top: 10px;
+        width: 100%;
         color: #20253A;
         font-size: 15px;
         font-style: normal;

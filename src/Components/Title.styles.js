@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 export const TitleStyle = styled.div`
     margin-bottom: 77px;
+    padding-left: 8%;
     p{
         display: inline;
     }

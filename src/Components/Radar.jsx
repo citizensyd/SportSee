@@ -1,6 +1,6 @@
 import React from 'react';
 import { RadarStyles } from './RadarStyles';
-import { RadarChart, PolarAngleAxis, PolarRadiusAxis, Radar, PolarGrid } from 'recharts';
+import { RadarChart, PolarAngleAxis, PolarRadiusAxis, Radar, PolarGrid, ResponsiveContainer } from 'recharts';
 
 
 const RadarUser = (props) => {
@@ -27,6 +27,7 @@ const RadarUser = (props) => {
     data.push(newData);
   }
   data.reverse();
+  console.log(data);
 
   const renderPolarAngleAxis = (props) => {
     const { x, y, payload } = props;
@@ -42,12 +43,12 @@ const RadarUser = (props) => {
         break;
       case 'Cardio':
       case 'Energie':
-        textX = -20;
+        textX = -15;
         textY = 0;
         break;
       case 'Vitesse':
       case 'Force':
-        textX = 20;
+        textX = 14;
         textY = 0;
         break;
       default:
@@ -73,12 +74,14 @@ const RadarUser = (props) => {
 
   return (
     <RadarStyles>
-      <RadarChart outerRadius="65%" width={258} height={263} data={data} cx="50%" cy="50%">
-        <PolarGrid radialLines={false} polarRadius={[0, 10, 20, 40, 60, 80]} />
-        <PolarAngleAxis dataKey="subject" tick={props => renderPolarAngleAxis(props)} />
-        <PolarRadiusAxis axisLine={false} angle={30} tick={false} domain={[0, 200]} />
-        <Radar dataKey="user" fill="rgba(255, 1, 1, 0.70)" />
-      </RadarChart>
+      <ResponsiveContainer height='100%' width='100%'>
+        <RadarChart outerRadius="65%" data={data} cx="50%" cy="50%">
+          <PolarGrid radialLines={false} /* polarRadius={[0, 10, 20, 40, 60, 80]} */ />
+          <PolarAngleAxis dataKey="subject" tick={props => renderPolarAngleAxis(props)} />
+          <PolarRadiusAxis axisLine={false} angle={30} tick={false} domain={[0, 200]} />
+          <Radar dataKey="user" fill="rgba(255, 1, 1, 0.70)" />
+        </RadarChart>
+      </ResponsiveContainer>
     </RadarStyles>
   );
 };

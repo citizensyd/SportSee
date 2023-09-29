@@ -3,9 +3,9 @@ import styled from 'styled-components';
 export const NutrimentStyle = styled.div`
     display: flex;
     align-items: center;
-    width: 258px;
+    width: 100%;
     height: 124px;
-    padding-left: 32px;
+    padding-left: 10%;
     flex-shrink: 0;
     border-radius: 5px;
     background: #FBFBFB/* #FBFBFB */;
@@ -20,7 +20,7 @@ export const NutrimentStyle = styled.div`
         flex-direction: column;
         justify-content: space-around;
         height: 60px;
-        padding-left: 24px;
+        padding-left: 10%;
         p:first-child {
             color: #282D30;
             font-weight: 700;

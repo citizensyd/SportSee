@@ -4,7 +4,7 @@ export const AverageSessionLengthStyles = styled.div`
     position: relative;
     display: flex;
     justify-content: center;
-    width: 258px;
+    width: 32%;
     height: 263px;
     overflow: hidden;
     flex-shrink: 0;
@@ -21,6 +21,9 @@ export const AverageSessionLengthStyles = styled.div`
         line-height: 24px;
         top: 29px;
         left: 34px;
+    }
+    svg{
+        transform: scale(1.15) translateY(-10px);
     }
 `;
 
@@ -40,9 +43,9 @@ export const CustomTooltipStyle = styled.div`
 
 export const BackgroundRedDark = styled.div`
     position: absolute;
-    width: 75px;
+    width: 40%;
     height: 100%;
-    right: 0px;
+    right: -20px;
     opacity: 0.0975;
     background: #000;
 `;

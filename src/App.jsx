@@ -1,11 +1,17 @@
-import React from "react";
+import React from 'react';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { GlobalStyle } from './app.styles';
+import Home from './pages/Home';
 
-const App = (props) => {
-  console.log("appel de app");
+const App = () => {
+  console.log('appel de app');
   return (
-    <section className="body-page">
-      {props.children}
-    </section>
+    <BrowserRouter>
+      <GlobalStyle />
+      <Routes>
+        <Route path="user/:userId" element={<Home />} />
+      </Routes>
+    </BrowserRouter>
   );
 };
 

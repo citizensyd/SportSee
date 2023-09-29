@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const ScoreStyles = styled.div`
     position: relative;
-    width: 258px;
+    width: 32%;
     height: 263px;
     flex-shrink: 0;
     border-radius: 5px;
@@ -15,7 +15,7 @@ export const ScoreTitle = styled.p`
     margin: 0;
     position: absolute;
     top: 24px;
-    left: 30px;
+    left: 8%;
     color: #20253A;
     font-size: 15px;
     font-weight: bold;

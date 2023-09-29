@@ -1,9 +1,11 @@
 import styled from 'styled-components';
 
 export const ChartDailyBusinessStyle = styled.div`
-  position: absolute;
-  left: 50px;
-  top: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  width: 100%;
+  padding-bottom: 20px;
 `;
 
 export const CustomTooltipStyle = styled.div`
