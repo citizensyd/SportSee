@@ -5,6 +5,7 @@ import { CustomTooltipStyle } from './AverageSessionLengthStyles';
 import { BackgroundRedDark } from './AverageSessionLengthStyles';
 
 const AverageSessionLength = (props) => {
+  console.log(props);
   const addEndDay = props.userAverage.length + 1;
 
   const CustomTooltip = ({ active, payload }) => {

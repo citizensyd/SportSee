@@ -11,6 +11,9 @@
 # production
 /build
 
+# service
+src/Service/format.js
+
 # misc
 .DS_Store
 .env.local

@@ -5,6 +5,7 @@ import { CustomTooltipStyle } from './ChartDailyBusinessStyle';
 
 
 const ChartDailyBusiness = (props) => {
+  console.log(props);
   const customTickFormatter = (tick) => {
     const date = new Date(tick);
     return date.getDate();

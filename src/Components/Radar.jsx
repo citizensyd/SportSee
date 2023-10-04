@@ -5,9 +5,10 @@ import { RadarChart, PolarAngleAxis, PolarRadiusAxis, Radar, PolarGrid, Responsi
 
 const RadarUser = (props) => {
 
+  console.log(props);
   let data = [];
   let newData = {};
-  const userPerformanceData = props.userPerformance.data;
+  const userPerformanceData = props.userPerformance;
 
   const translations = {
     "1": "Cardio",
@@ -19,6 +20,7 @@ const RadarUser = (props) => {
   };
 
   for (const key in userPerformanceData) {
+    console.log("data");
     newData = {
       subject: translations[parseInt(key) + 1],
       user: userPerformanceData[key].value,
