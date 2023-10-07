@@ -5,7 +5,6 @@ import { RadarChart, PolarAngleAxis, PolarRadiusAxis, Radar, PolarGrid, Responsi
 
 const RadarUser = (props) => {
 
-  console.log(props);
   let data = [];
   let newData = {};
   const userPerformanceData = props.userPerformance;
@@ -20,7 +19,6 @@ const RadarUser = (props) => {
   };
 
   for (const key in userPerformanceData) {
-    console.log("data");
     newData = {
       subject: translations[parseInt(key) + 1],
       user: userPerformanceData[key].value,
@@ -29,7 +27,6 @@ const RadarUser = (props) => {
     data.push(newData);
   }
   data.reverse();
-  console.log(data);
 
   const renderPolarAngleAxis = (props) => {
     const { x, y, payload } = props;

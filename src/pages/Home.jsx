@@ -1,36 +1,33 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import fetchData from "../Service/api";
+import useFetchData from "../Service/api";
+import Loading from "../Images/Loading.svg"
 import HorizontalBar from "../Components/HorizontalBar";
 import VerticalBar from "../Components/VerticalBar";
 import SectionUser from "../Components/SectionUser";
+import { MessageError, MessageLoading } from "./Home.styles";
 
 const Home = () => {
-  console.log("appel de home");
   const { userId } = useParams();
-  console.log(userId);
 
-  const [data, loading, error] = fetchData(userId, "api");
-  console.log(loading);
-  console.log(error);
-  console.log(data);
+  const [data, loading, error] = useFetchData(userId, "api");
 
   return (
     <>
       <HorizontalBar />
       <VerticalBar />
       {loading ? (
-        <p>Chargement en cours...</p>
+        <MessageLoading><img src={Loading} alt="Animation de chargement" /></MessageLoading>
       ) : error ? (
-        <p>Une erreur s'est produite lors de la récupération des données.</p>
+        <MessageError>Oups !<br/>Petit souci en récupérant vos données.<br/>Merci de réessayer plus tard.<br/>🙏</MessageError>
       ) : data ? (
         <SectionUser
-          firstName={data[0].userInfos.firstName}
-          sessionsData={data[1].sessions}
-          userNutriment={data[0].keyData}
-          userAverage={data[2].sessions}
-          userPerformance={data[3].data}
-          userObjective={data[0].score}
+          firstName={data.userInfos.firstName}
+          sessionsData={data.sessionsDateKgCal}
+          userNutriment={data.nutriments}
+          userAverage={data.sessionsAverage}
+          userPerformance={data.performance}
+          userObjective={data.todayScore}
         />
       ) : null}
     </>

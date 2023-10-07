@@ -4,7 +4,6 @@ import { GlobalStyle } from './app.styles';
 import Home from './pages/Home';
 
 const App = () => {
-  console.log('appel de app');
   return (
     <BrowserRouter>
       <GlobalStyle />

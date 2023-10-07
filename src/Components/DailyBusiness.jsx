@@ -4,6 +4,7 @@ import ChartDailyBusiness from "./ChartDailyBusiness";
 import { DailyBusinessStyle } from "./DailyBusiness.styles";
 
 const DailyBusiness = (props) => {
+    
     return (
         <DailyBusinessStyle>
             <p>Activité Quotidienne</p>

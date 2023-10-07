@@ -4,23 +4,16 @@ import { PieChart, Pie, Cell, ResponsiveContainer } from 'recharts';
 
 const Score = (props) => {
 
-  let scoreDay = props.userObjective * 100;
-  let scoreDayOpposite = 100 - scoreDay;
-  const data = [
-    { value: scoreDay },
-    { value: scoreDayOpposite }
-  ];
-
   return (
     <ScoreStyles>
       <ScoreTitle>Score</ScoreTitle>
-      <ScoreText><span>{scoreDay}%</span><br />de votre <br />objectif</ScoreText>
+      <ScoreText><span>{props.userObjective[0].value}%</span><br />de votre <br />objectif</ScoreText>
       <ResponsiveContainer height='100%' width='100%'>
         <PieChart>
           <Pie stroke="none" data={[{ value: 100 }]} dataKey="value" fill="#FFF" isAnimationActive={false} />
           <Pie
             fill="#FFF"
-            data={data}
+            data={props.userObjective}
             cx="50%"
             cy="50%"
             innerRadius="80%"
@@ -31,8 +24,8 @@ const Score = (props) => {
             endAngle={-150}
             stroke="none"
           >
-            <Cell key="A" fill="#E60000" />
-            <Cell key="B" fill="#FBFBFB" />
+            <Cell key="scoreDay" fill="#E60000" />
+            <Cell key="scoreDayOpposite" fill="#FBFBFB" />
           </Pie>
         </PieChart>
       </ResponsiveContainer>

@@ -5,11 +5,6 @@ import { CustomTooltipStyle } from './ChartDailyBusinessStyle';
 
 
 const ChartDailyBusiness = (props) => {
-  console.log(props);
-  const customTickFormatter = (tick) => {
-    const date = new Date(tick);
-    return date.getDate();
-  };
 
   const CustomTooltip = ({ active, payload }) => {
     if (active) {
@@ -29,7 +24,7 @@ const ChartDailyBusiness = (props) => {
       <ResponsiveContainer height='70%' width='100%'>
         <BarChart width={750} height={200} data={props.sessionsData} >
           <CartesianGrid strokeDasharray="2 3" vertical={false} />
-          <XAxis tickMargin={16} dataKey="day" tickLine={false} axisLine={false} tickFormatter={customTickFormatter} />
+          <XAxis tickMargin={16} dataKey="day" tickLine={false} axisLine={false} />
           <YAxis yAxisId="kg" tickCount="4" tickLine={false} axisLine={false} orientation="right" dataKey={"kilogram"} type="number" domain={['dataMin-1', 'dataMax+1']} />
           <YAxis yAxisId="cal" hide="true" tickLine={false} axisLine={false} dataKey={"calories"} type="number" domain={[0, 'dataMax+20']} />
           <Tooltip content={<CustomTooltip />} />

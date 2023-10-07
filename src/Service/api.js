@@ -2,13 +2,12 @@ import { useState, useEffect } from "react";
 import FormatData from "./format";
 import mocked from "./mocked.json";
 
-const fetchData = (userId, apiMode) => {
+const useFetchData = (userId, apiMode) => {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
 
   useEffect(() => {
-    console.log("useEffect");
 
     const fetchDataFromApi = async () => {
       let temporaryUserData = [];
@@ -32,11 +31,10 @@ const fetchData = (userId, apiMode) => {
               temporaryUserData.push(userDataJson.data);
             }
           }
+          const formatter = new FormatData(temporaryUserData);
+          const newDataValue = formatter.getNewData();
+          setData(newDataValue);
 
-          /* const formatData = new FormatData(temporaryUserData); */
-          /* const formattedUserData = formatData.concatenateData(); */
-
-          setData(temporaryUserData);
         } else {
           mocked.forEach((data) => {
             if (data.id === parseInt(userId) || data.userId === parseInt(userId)) {
@@ -45,9 +43,9 @@ const fetchData = (userId, apiMode) => {
           });
 
           if (temporaryUserData[0] && temporaryUserData[0].id) {
-            /* const formatData = new FormatData(temporaryUserData); */
-            /* const formattedUserData = formatData.concatenateData(); */
-            setData(temporaryUserData);
+            const formatter = new FormatData(temporaryUserData);
+            const newDataValue = formatter.getNewData();
+            setData(newDataValue);
           } else {
             setError(true);
           }
@@ -57,7 +55,10 @@ const fetchData = (userId, apiMode) => {
         setError(true);
       }
 
-      setLoading(false);
+      setTimeout(() => {
+        setLoading(false);
+      }, 2000);
+
     };
 
     fetchDataFromApi();
@@ -66,4 +67,4 @@ const fetchData = (userId, apiMode) => {
   return [data, loading, error];
 };
 
-export default fetchData;
+export default useFetchData;
