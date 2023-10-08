@@ -64,7 +64,9 @@ const useFetchData = (userId, apiMode) => {
         console.error("Error during data fetching.");
         setError(true);
       } finally {
-        setLoading(false);
+        setTimeout(() => {
+          setLoading(false);
+        }, 2000);
       }
     };
 
