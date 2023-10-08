@@ -10,7 +10,7 @@ import { MessageError, MessageLoading } from "./Home.styles";
 const Home = () => {
   const { userId } = useParams();
 
-  const [data, loading, error] = useFetchData(userId, "api");
+  const {data, loading, error} = useFetchData(userId, "api");
 
   return (
     <>
