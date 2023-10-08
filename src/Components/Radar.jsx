@@ -2,32 +2,23 @@ import React from 'react';
 import { RadarStyles } from './RadarStyles';
 import { RadarChart, PolarAngleAxis, PolarRadiusAxis, Radar, PolarGrid, ResponsiveContainer } from 'recharts';
 
-
+/**
+ * RadarUser component. Represents a radar chart that visualizes user performance metrics.
+ * 
+ * @param {Object} props - Props passed into the component.
+ * @param {Array} props.userPerformance - Array of objects representing user performance data.
+ */
 const RadarUser = (props) => {
 
-  let data = [];
-  let newData = {};
-  const userPerformanceData = props.userPerformance;
-
-  const translations = {
-    "1": "Cardio",
-    "2": "Energie",
-    "3": "Endurance",
-    "4": "Force",
-    "5": "Vitesse",
-    "6": "Intensité"
-  };
-
-  for (const key in userPerformanceData) {
-    newData = {
-      subject: translations[parseInt(key) + 1],
-      user: userPerformanceData[key].value,
-      fullMark: 200
-    };
-    data.push(newData);
-  }
-  data.reverse();
-
+  /**
+   * Custom rendering of the PolarAngleAxis labels based on payload values.
+   * 
+   * @param {Object} props - Props passed into the function.
+   * @param {number} props.x - X-coordinate of the axis label.
+   * @param {number} props.y - Y-coordinate of the axis label.
+   * @param {Object} props.payload - Object containing value of the axis label.
+   * @returns {JSX.Element} Custom rendered axis label.
+   */
   const renderPolarAngleAxis = (props) => {
     const { x, y, payload } = props;
     const margin = 5;
@@ -74,8 +65,8 @@ const RadarUser = (props) => {
   return (
     <RadarStyles>
       <ResponsiveContainer height='100%' width='100%'>
-        <RadarChart outerRadius="65%" data={data} cx="50%" cy="50%">
-          <PolarGrid radialLines={false} /* polarRadius={[0, 10, 20, 40, 60, 80]} */ />
+        <RadarChart outerRadius="65%" data={props.userPerformance} cx="50%" cy="50%">
+          <PolarGrid radialLines={false} />
           <PolarAngleAxis dataKey="subject" tick={props => renderPolarAngleAxis(props)} />
           <PolarRadiusAxis axisLine={false} angle={30} tick={false} domain={[0, 200]} />
           <Radar dataKey="user" fill="rgba(255, 1, 1, 0.70)" />
@@ -84,4 +75,5 @@ const RadarUser = (props) => {
     </RadarStyles>
   );
 };
+
 export default RadarUser;

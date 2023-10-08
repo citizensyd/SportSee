@@ -1,13 +1,24 @@
 import React from 'react';
 import { LineChart, Line, XAxis, YAxis, Tooltip, ResponsiveContainer } from 'recharts';
-import { AverageSessionLengthStyles } from './AverageSessionLengthStyles';
-import { CustomTooltipStyle } from './AverageSessionLengthStyles';
-import { BackgroundRedDark } from './AverageSessionLengthStyles';
+import { AverageSessionLengthStyles, CustomTooltipStyle, BackgroundRedDark } from './AverageSessionLengthStyles';
 
+/**
+ * AverageSessionLength component. Represents a Line Chart showcasing the average session length of a user.
+ * 
+ * @param {Object} props - Props passed into the component.
+ * @param {Array} props.userAverage - Data for the user's average session length.
+ */
 const AverageSessionLength = (props) => {
 
+  /**
+   * Custom Tooltip for the LineChart.
+   *
+   * @param {Object} params - Parameters passed to the tooltip.
+   * @param {boolean} params.active - Indicates if the tooltip is active.
+   * @param {Array} params.payload - Data being displayed by the tooltip.
+   * @returns {(JSX.Element|null)} - A custom-styled tooltip element or null.
+   */
   const CustomTooltip = ({ active, payload }) => {
-
     if (active && payload && payload.length) {
       return (
         <CustomTooltipStyle>
@@ -15,10 +26,8 @@ const AverageSessionLength = (props) => {
         </CustomTooltipStyle>
       );
     }
-
     return null;
   };
-
 
   return (
     <AverageSessionLengthStyles>
@@ -60,4 +69,5 @@ const AverageSessionLength = (props) => {
     </AverageSessionLengthStyles>
   );
 };
+
 export default AverageSessionLength;

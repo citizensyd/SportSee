@@ -1,11 +1,23 @@
 import React from 'react';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
-import { ChartDailyBusinessStyle } from './ChartDailyBusinessStyle';
-import { CustomTooltipStyle } from './ChartDailyBusinessStyle';
+import { ChartDailyBusinessStyle, CustomTooltipStyle } from './ChartDailyBusinessStyle';
 
-
+/**
+ * ChartDailyBusiness component. Represents a Bar Chart showcasing daily business-related metrics.
+ * 
+ * @param {Object} props - Props passed into the component.
+ * @param {Array} props.sessionsData - Data for daily business metrics, including weight and calories burned.
+ */
 const ChartDailyBusiness = (props) => {
 
+  /**
+   * Custom Tooltip for the BarChart.
+   *
+   * @param {Object} params - Parameters passed to the tooltip.
+   * @param {boolean} params.active - Indicates if the tooltip is active.
+   * @param {Array} params.payload - Data being displayed by the tooltip.
+   * @returns {(JSX.Element|null)} - A custom-styled tooltip element or null.
+   */
   const CustomTooltip = ({ active, payload }) => {
     if (active) {
       return (

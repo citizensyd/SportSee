@@ -5,7 +5,15 @@ import FormatTodayScore from "./formatTodayScore";
 import FormatSessionsAverage from "./formatSessionsAverage";
 import FormatSessionsDateKgCal from "./formatSessionsDateKgCal";
 
+/**
+ * Class to format and structure data.
+ */
 class FormatData {
+  /**
+   * Create a data formatter.
+   * 
+   * @param {Array} data - The data to be formatted.
+   */
   constructor(data) {
     this.data = data;
     this.previousData = this.newData;
@@ -19,17 +27,25 @@ class FormatData {
     this.formatSessionsDateKgCal = new FormatSessionsDateKgCal(this.data, this.newData);
   }
   
+  /**
+   * Get the formatted data.
+   * 
+   * @returns {Array} The formatted data.
+   */
   getFormatNewData() {
     try {
       this.#updateNewData();
       console.log(this.newData);
       return this.newData;
     } catch (error) {
-      console.error("Erreur lors du formatage des données:", error);
+      console.error("Error during data formatting:", error);
       throw error;
     }
   }
 
+  /**
+   * Update the newData attribute by using various format methods.
+   */
   #updateNewData() {
     try {
       this.formatNutriments.formatCalorieCount();
@@ -40,7 +56,7 @@ class FormatData {
       this.formatSessionsDateKgCal.updateSessionsDateKgCal();
       this.formatPerformance.updatePerformance();
     } catch (error) {
-      console.error("Erreur lors de la mise à jour des données:", error);
+      console.error("Error during data update:", error);
       throw error;
     }
   }

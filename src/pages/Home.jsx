@@ -7,9 +7,23 @@ import VerticalBar from "../Components/VerticalBar";
 import SectionUser from "../Components/SectionUser";
 import { MessageError, MessageLoading } from "./Home.styles";
 
+/**
+ * Home component. Represents the main page of the application.
+ * Fetches and displays user data, provides visual feedback for loading and error states.
+ */
 const Home = () => {
+  /** 
+   * Extracts the userId from the current route parameters.
+   */
   const { userId } = useParams();
 
+  /**
+   * Custom hook to fetch user data.
+   * @type {Object}
+   * @property {Array} data - The user's data.
+   * @property {boolean} loading - Loading state of the fetch operation.
+   * @property {boolean} error - Any error encountered during fetch.
+   */
   const {data, loading, error} = useFetchData(userId, "api");
 
   return (
