@@ -45,11 +45,15 @@ const useFetchData = (userId, apiMode) => {
       let temporaryUserData = [];
 
       try {
-        if (apiMode === "api") {
-          temporaryUserData = await fetchApiData(userId);
-        } else {
+        console.log(process.env.REACT_APP_USE_MOCK_DATA);
+        if (process.env.REACT_APP_USE_MOCK_DATA === 'true') {
+          console.log("mocked");
           temporaryUserData = fetchMockedData(userId);
+        } else {
+          console.log("Calls Api");
+          temporaryUserData = await fetchApiData(userId);
         }
+
 
         try {
           const formatter = new FormatData(temporaryUserData);
