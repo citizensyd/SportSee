@@ -14,6 +14,19 @@
 # production
 /build
 
+# automotion
+skottAPI.js
+
+# reportWebVitals configuration
+/src/reportWebVitals.js
+
+# test configuration
+/src/setupTests.js
+/src/App.test.js
+
+# automotion presentation
+graph.svg
+
 # misc
 .DS_Store
 .env.local
