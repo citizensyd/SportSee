@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const HorBar = styled.div`
+export const HorBar = styled.header`
     z-index: 2;
     position: fixed;
     top: 0px;

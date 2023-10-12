@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const TitleStyle = styled.div`
+export const TitleStyle = styled.section`
     margin-bottom: 77px;
     padding-left: 8%;
     p{

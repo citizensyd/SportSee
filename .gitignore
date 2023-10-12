@@ -14,9 +14,6 @@
 # production
 /build
 
-# automotion
-skottAPI.js
-
 # reportWebVitals configuration
 /src/reportWebVitals.js
 
@@ -25,7 +22,11 @@ skottAPI.js
 /src/App.test.js
 
 # automotion presentation
+skottAPI.js
 graph.svg
+.madgerc
+.dependency-cruiser.js
+dependency-graph.svg
 
 # misc
 .DS_Store

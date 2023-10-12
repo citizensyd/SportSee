@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const DailyBusinessStyle = styled.div`
+export const DailyBusinessStyle = styled.section`
 position: relative;
     display: flex;
     width: 100%;

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const SectionUserStyle = styled.div`
+export const SectionUserStyle = styled.main`
     display: flex;
     flex-direction: column;
     width: calc(100% - 117px);
@@ -9,7 +9,7 @@ export const SectionUserStyle = styled.div`
     margin-bottom: 88px;
     `;
 
-export const GraphStyle =styled.div`
+export const GraphStyle =styled.section`
     display: flex;
     justify-content: space-between;
     padding-left: 8%;
@@ -17,7 +17,7 @@ export const GraphStyle =styled.div`
     width: 100%;
 `;
 
-export const DailyAvRaSco = styled.div`
+export const DailyAvRaSco = styled.section`
     display: flex;
     flex-direction: column;
     width: 75%;

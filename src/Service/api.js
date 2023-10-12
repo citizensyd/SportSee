@@ -8,10 +8,9 @@ const BASE_URL = "http://localhost:4000/user/";
  * Custom hook for fetching user data.
  * 
  * @param {string|number} userId - User ID to fetch data for.
- * @param {string} apiMode - Mode for fetching data ("api" or "mock").
  * @returns {Object} An object containing the fetched data, loading status, and error status.
  */
-const useFetchData = (userId, apiMode) => {
+const useFetchData = (userId) => {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
@@ -75,7 +74,7 @@ const useFetchData = (userId, apiMode) => {
     };
 
     fetchDataFromApi();
-  }, [userId, apiMode]);
+  }, [userId]);
 
   return { data, loading, error };
 };

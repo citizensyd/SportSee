@@ -20,7 +20,7 @@ class FormatNutriments {
    * Format the calorie count for each data element.
    */
   formatCalorieCount() {
-    this.data.forEach(element => this._formatIndividualCalorieCount(element));
+    this.data.map(element => this._formatIndividualCalorieCount(element));
   }
 
   /**
@@ -28,7 +28,6 @@ class FormatNutriments {
    */
   updateItem() {
     const changeData = this.data[0].keyData;
-    this.data[0].nutriments = this._createNutriments(changeData);
     this.newData.nutriments = this._createNutriments(changeData);
   }
 
