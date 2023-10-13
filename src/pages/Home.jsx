@@ -24,7 +24,7 @@ const Home = () => {
    * @property {boolean} loading - Loading state of the fetch operation.
    * @property {boolean} error - Any error encountered during fetch.
    */
-  const {data, loading, error} = useFetchData(userId, "api");
+  const {data, loading, error} = useFetchData(userId);
 
   return (
     <>

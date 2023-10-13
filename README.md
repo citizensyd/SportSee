@@ -90,6 +90,8 @@ Please ensure you have the following dependencies installed on your system:
 - Node.js and npm (to run the backend server and frontend app)
 - Git (for cloning the repository)
 
+### 🔧 Installation 
+
 ### ***Setting Up and Running the Backend***
 
 1. First, clone the backend repository from [here](https://github.com/OpenClassrooms-Student-Center/P9-front-end-dashboard).
@@ -120,11 +122,11 @@ Please ensure you have the following dependencies installed on your system:
 
 Your backend server should now be running on `http://localhost:4000/`.
 
----
-
 Please modify it as per your project's needs.
 
-### 🔧 Installation
+---
+
+### ***Setting Up and Running the Frontend***
 
 1. Clone the SportSee repository:
 ```sh
