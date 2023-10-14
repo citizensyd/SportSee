@@ -2,10 +2,10 @@ import React from "react";
 
 import { SectionUserStyle } from "./SectionUser.styles";
 import { GraphStyle, DailyAvRaSco } from "./SectionUser.styles";
-import DailyBusiness from './DailyBusiness';
-import Title from "./Title";
-import NutrimentsContainer from "./NutrimentsContainer";
-import AvRaScoContainer from "./AvRaScoContainer";
+import ChartDailyBusinessContainer from './ChartDailyBusiness/ChartDailyBusinessContainer';
+import Title from "./Title/Title";
+import NutrimentsContainer from "./Nutriments/NutrimentsContainer";
+import AvRaScoContainer from "./AvRaSco/AvRaScoContainer";
 
 const SectionUser = (props) => {
 
@@ -14,7 +14,7 @@ const SectionUser = (props) => {
       <Title firstName={props.firstName}></Title>
       <GraphStyle>
         <DailyAvRaSco>
-          <DailyBusiness sessionsData={props.sessionsData} />                
+          <ChartDailyBusinessContainer sessionsData={props.sessionsData} />                
           <AvRaScoContainer
             userAverage={props.userAverage}
             userPerformance={props.userPerformance}

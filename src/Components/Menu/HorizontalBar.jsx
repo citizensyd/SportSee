@@ -4,7 +4,7 @@ import { HorBar } from "./HorizontalBar.styles";
 import { NavHor } from "./HorizontalBar.styles";
 import { NavItem } from "./HorizontalBar.styles";
 
-import Logo from "../Images/logo.png";
+import Logo from "../../Images/logo.png";
 
 const HorizontalBar = () => {
   return (

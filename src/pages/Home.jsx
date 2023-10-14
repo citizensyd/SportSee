@@ -2,9 +2,9 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import useFetchData from "../Service/api";
 import Loading from "../Images/Loading.svg"
-import HorizontalBar from "../Components/HorizontalBar";
-import VerticalBar from "../Components/VerticalBar";
-import SectionUser from "../Components/SectionUser";
+import HorizontalBar from "../Components/Menu/HorizontalBar";
+import VerticalBar from "../Components/Menu/VerticalBar";
+import SectionUser from "../Components/SectionUser/SectionUser";
 import { MessageError, MessageLoading } from "./Home.styles";
 
 /**

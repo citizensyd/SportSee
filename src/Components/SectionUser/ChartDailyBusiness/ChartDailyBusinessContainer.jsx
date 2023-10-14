@@ -1,7 +1,7 @@
 import React from "react";
 
 import ChartDailyBusiness from "./ChartDailyBusiness";
-import { DailyBusinessStyle } from "./DailyBusiness.styles";
+import { DailyBusinessStyle } from "./ChartDailyBusinessContainer.styles";
 
 const DailyBusiness = (props) => {
     

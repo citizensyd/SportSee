@@ -2,10 +2,10 @@ import React from "react";
 
 import { VerBar } from "./VerticalBar.styles";
 import { VerNav } from "./VerticalBar.styles";
-import cyclisme from "../Images/cyclisme.png"
-import musculation from "../Images/musculation.png"
-import natation from "../Images/natation.png"
-import yoga from "../Images/yoga.png"
+import cyclisme from "../../Images/cyclisme.png"
+import musculation from "../../Images/musculation.png"
+import natation from "../../Images/natation.png"
+import yoga from "../../Images/yoga.png"
 
 
 const VerticalBar = () => {

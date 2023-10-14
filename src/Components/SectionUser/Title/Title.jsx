@@ -1,6 +1,6 @@
 import React from "react";
 import { TitleStyle } from "./Title.styles.js";
-import applaudissement from "../Images/applaudissements.png"
+import applaudissement from "../../../Images/applaudissements.png"
 
 const Title = (props) => {
   return (

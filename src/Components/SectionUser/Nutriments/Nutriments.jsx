@@ -2,10 +2,10 @@ import React from "react";
 
 import { NutrimentStyle } from "./Nutriment.styles";
 
-import caloriesIcon from "../Images/calories-icon.png";
-import carbsIcon from "../Images/carbs-icon.png";
-import fatIcon from "../Images/fat-icon.png";
-import proteinIcon from "../Images/protein-icon.png";
+import caloriesIcon from "../../../Images/calories-icon.png";
+import carbsIcon from "../../../Images/carbs-icon.png";
+import fatIcon from "../../../Images/fat-icon.png";
+import proteinIcon from "../../../Images/protein-icon.png";
 
 /**
  * Nutriment component. Represents nutritional information with an associated icon.
