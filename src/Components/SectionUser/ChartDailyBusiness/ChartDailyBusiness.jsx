@@ -34,7 +34,7 @@ const ChartDailyBusiness = (props) => {
   return (
     <ChartDailyBusinessStyle>
       <ResponsiveContainer height='70%' width='100%'>
-        <BarChart width={750} height={200} data={props.sessionsData} >
+        <BarChart data={props.sessionsData} >
           <CartesianGrid strokeDasharray="2 3" vertical={false} />
           <XAxis tickMargin={16} dataKey="day" tickLine={false} axisLine={false} />
           <YAxis yAxisId="kg" tickCount="4" tickLine={false} axisLine={false} orientation="right" dataKey={"kilogram"} type="number" domain={['dataMin-1', 'dataMax+1']} />

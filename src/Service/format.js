@@ -16,9 +16,8 @@ class FormatData {
    */
   constructor(data) {
     this.data = data;
-    this.previousData = this.newData;
     console.log(this.data);
-    this.newData = [];
+    this.newData = {};
     this.formatNutriments = new FormatNutriments(this.data, this.newData);
     this.formatUserInfos = new FormatUserInfos(this.data, this.newData);
     this.formatPerformance = new FormatPerformance(this.data, this.newData);

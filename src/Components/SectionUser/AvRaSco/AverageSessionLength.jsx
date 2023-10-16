@@ -51,6 +51,7 @@ const AverageSessionLength = (props) => {
           <YAxis
             hide="true"
             dataKey={"sessionLength"}
+            domain={['0', 'dataMax+20']}
           />
           <Tooltip
             cursor=""
