@@ -25,7 +25,6 @@ const Home = () => {
    * @property {boolean} error - Any error encountered during fetch.
    */
   const {data, loading, error} = useFetchData(userId);
-
   return (
     <>
       <HorizontalBar />

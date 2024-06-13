@@ -34,7 +34,7 @@ const AverageSessionLength = (props) => {
       <BackgroundRedDark />
       <p>Durée moyenne des<br />sessions</p>
       <ResponsiveContainer height='100%' width='100%'>
-        <LineChart width={290} height={263} data={props.userAverage} >
+        <LineChart data={props.userAverage} >
           <defs>
             <linearGradient id="grad" x1="0%" y1="50%" x2="100%" y2="50%">
               <stop offset="0%" stopColor="rgba(255, 255, 255, 0.5)" />

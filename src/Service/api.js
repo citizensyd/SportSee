@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import FormatData from "./format";
 import mocked from "./mocked.json";
 
-const BASE_URL = "http://localhost:4000/user/";
+const BASE_URL = "https://web-app-sportsee-back.vercel.app/user/";
 
 /**
  * Custom hook for fetching user data.
