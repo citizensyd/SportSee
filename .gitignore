@@ -11,9 +11,6 @@
 # production
 /build
 
-# reportWebVitals configuration
-/src/reportWebVitals.js
-
 # test configuration
 /src/setupTests.js
 /src/App.test.js
